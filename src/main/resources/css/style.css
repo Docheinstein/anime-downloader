@@ -1,0 +1,300 @@
+* {
+    /*-fx-text-inner-color: #b5b5b5;*/
+
+    /*-fx-control-inner-background-alt: #384045; !* TableView alternative rows background color *!*/
+
+    /*-fx-control-inner-background: #2d3135;*/
+
+    /*-fx-text-background-color: #b5b5b5; !* => TableView rows text color  *!*/
+
+/*    -fx-accent: #596b7a;
+
+    -fx-focus-color: #596b7a;
+
+    -fx-faint-focus-color: #495967;*/
+
+    -midnight-less-4: #6b7276;
+    -midnight-less-3: #535a5e;
+    -midnight-less-2: #43494c;
+    -midnight-less-1: #34393c;
+    -midnight: #2c3034;
+    -midnight-more-1: #282b2f;
+    -midnight-more-2: #22272b;
+    -midnight-more-3: #1a2126;
+
+    -midday:          #b5b5b5;
+    -midday-more-1:   #9c9c9c;
+    -midday-more-2:   #898989;
+    -midday-more-3:   #646464;
+
+/*    -fx-selection-bar-non-focused: -midnight;
+    -fx-control-inner-background: -midnight-less-1;
+    -fx-box-border: -midnight;*/
+}
+
+/* THEME */
+
+.bg-midnight-less-4 {
+    -fx-background-color: -midnight-less-4;
+}
+
+.bg-midnight-less-3 {
+    -fx-background-color: -midnight-less-3;
+}
+
+.bg-midnight-less-2 {
+    -fx-background-color: -midnight-less-2;
+}
+
+.bg-midnight-less-1 {
+    -fx-background-color: -midnight-less-1;
+}
+
+.bg-midnight {
+    -fx-background-color: -midnight;
+}
+
+.bg-midnight-more-1 {
+    -fx-background-color: -midnight-more-1;
+}
+
+.bg-midnight-more-2 {
+    -fx-background-color: -midnight-more-2;
+}
+
+.bg-midnight-more-3 {
+    -fx-background-color: -midnight-more-3;
+}
+
+.text-midday {
+    -fx-text-fill: -midday;
+    -fx-fill: -midday;
+}
+
+.text-midday-more-1 {
+    -fx-text-fill: -midday-more-1;
+    -fx-fill: -midday-more-1;
+}
+
+.text-midday-more-2 {
+    -fx-text-fill: -midday-more-2;
+    -fx-fill: -midday-more-2;
+}
+
+.text-midday-more-3 {
+    -fx-text-fill: -midday-more-3;
+    -fx-fill: -midday-more-3;
+}
+
+/* THEME - END */
+
+/* COMMON STUFF */
+
+/* Dialog */
+
+.dialog-pane
+,.dialog-pane .header-panel {
+    -fx-background-color: -midnight;
+
+}
+
+.dialog-pane .label {
+    -fx-text-fill: -midday;
+}
+
+.button {
+    -fx-background-color: -midnight-less-1;
+    -fx-text-fill: -midday;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow( three-pass-box, -midday, 4, 0.0, 0.0, 0.0);
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: -midnight-less-2;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-font-size: 15px;
+}
+
+/* Scroll bar */
+
+.scroll-bar
+,.scroll-bar .track-background
+,.scroll-bar .track
+,.scroll-bar .decrement-button
+,.scroll-bar .increment-button {
+    -fx-background-color: -midnight-less-2;
+    -fx-border-color: transparent;
+}
+
+
+.scroll-bar .thumb {
+    -fx-background-color: -midnight-less-1;
+    -fx-border-color: transparent;
+}
+
+
+.scroll-bar .decrement-arrow
+,.scroll-bar .increment-arrow {
+    -fx-background-color: -midday;
+    -fx-border-color: transparent;
+}
+
+.corner {
+    -fx-background-color: -midnight-less-2;
+    -fx-border-color: transparent;
+}
+
+/* Combobox */
+
+.combo-box
+{
+    -fx-background-color: -midnight-less-2;
+    -fx-text-fill: -midday;
+}
+
+.combo-box > .list-cell {
+    -fx-text-fill: -midday;
+}
+
+.combo-box > .list-view
+{
+    -fx-background-color: -midnight-less-2;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet >  .list-cell {
+    -fx-padding: 4;
+    -fx-background: -midnight-less-2;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: -midday;
+}
+
+
+/* Checkbox */
+
+.check-box-midnight .box {
+    -fx-background-color: -midnight-less-2;
+    -fx-border-color: -midday-more-1;
+    -fx-border-radius: 3px;
+    -fx-padding: 4px;
+}
+
+/* Textbox */
+
+.text-input
+{
+    -fx-background-color: -midnight-less-1;
+}
+
+.text-area .scroll-pane,
+.text-area .content
+{
+    -fx-background-color: -midnight-less-1;
+    -fx-text-fill: -midday;
+}
+
+.check-box-midnight:selected .mark {
+    -fx-background-color: -midday-more-2;
+}
+
+/* ListView */
+
+.list-view-midnight .list-cell,
+.list-view-midnight .list-cell:filled,
+.list-view-midnight .list-cell:selected,
+.list-view-midnight .list-cell:focused,
+.list-view-midnight .list-cell:hover {
+    -fx-background-color: transparent;
+    -fx-effect: null;
+}
+
+.list-view-midnight .list-cell {
+    -fx-padding: 1em 0.583em 1em 0.583em; /* 3 7 3 7 */
+}
+
+
+/* Button */
+
+.btn-midnight {
+    -fx-background-color: -midnight-less-3;
+    -fx-background-radius: 5, 4, 3, 5;
+    -fx-background-insets: 0, 1, 2, 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0 , 0);
+    -fx-cursor: hand;
+}
+
+/* Spinner */
+
+.spinner-midnight {
+    -fx-background-color: -midnight-less-3;
+}
+
+.spinner > .text-field {
+    -fx-background-color: -midnight-less-3;
+    -fx-text-fill: -midday;
+}
+
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: -midnight-less-3, -midnight-less-2, -midnight-less-1;
+}
+
+.spinner .increment-arrow-button .increment-arrow,
+.spinner .decrement-arrow-button .decrement-arrow{
+    -fx-background-color: -midnight-less-2, -midnight-less-3;
+}
+
+/* Tab Pane */
+
+.tab-pane-midnight > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-text-fill: -midday;
+}
+
+.tab-pane-midnight > .tab-header-area > .tab-header-background {
+    -fx-background-color: -midnight-less-3, -midnight-less-2, -midnight;
+}
+
+.tab-pane-midnight > .tab-header-area > .headers-region > .tab:top,
+.tab-pane-midnight > .tab-header-area > .headers-region > .tab:left,
+.tab-pane-midnight > .tab-header-area > .headers-region > .tab:right,
+.tab-pane-midnight > .tab-header-area > .headers-region > .tab:bottom {
+    -fx-background-color: -midnight-less-3, -midnight-less-2, -midnight-less-1;
+}
+
+
+/* COMMON STUFF - END */
+
+/* UTILS */
+
+.glow-on-hover:hover {
+    -fx-effect: dropshadow( three-pass-box, -midday, 4, 0.0, 0.0, 0.0);
+}
+
+.drop-shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 7, 0.0, 0, 0);
+}
+
+/* UTILS - END */
+
+/* SPECIFIC STUFF */
+
+.percentage-bar-background {
+    -fx-background-color: rgba(86, 196, 200, 0.3);
+}
+
+
+.percentage-bar-background.finished {
+    -fx-background-color: rgba(8, 110, 68, 0.72);
+}
+
+.percentage-bar-background.aborted {
+    -fx-background-color: rgba(110, 59, 26, 0.72);
+}
+
+/* SPECIFIC STUFF - END */

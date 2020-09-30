@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="uiRoot" prefHeight="750.0" prefWidth="750.0" styleClass="bg-midnight" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane styleClass="tab-pane-midnight" VBox.vgrow="ALWAYS">
+               <tabs>
+                  <Tab closable="false" text="General">
+                    <content>
+
+                       <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="bg-midnight">
+                          <content>
+                             <AnchorPane styleClass="bg-midnight">
+                                <children>
+                                   <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                         <VBox VBox.vgrow="ALWAYS">
+                                            <children>
+                                               <Label layoutX="10.0" layoutY="10.0" styleClass="text-midday" text="Remove downloaded video from list">
+                                                  <font>
+                                                     <Font name="System Bold" size="15.0" />
+                                                  </font>
+                                                  <VBox.margin>
+                                                     <Insets bottom="12.0" />
+                                                  </VBox.margin>
+                                               </Label>
+                                               <CheckBox fx:id="uiRemoveAfterDownload" mnemonicParsing="false" text="Remove the rows of the video from the list after the download">
+                                                  <opaqueInsets>
+                                                     <Insets />
+                                                  </opaqueInsets>
+                                                  <styleClass>
+                                                     <String fx:value="text-midday-more-1" />
+                                                     <String fx:value="check-box-midnight" />
+                                                  </styleClass>
+                                                  <cursor>
+                                                     <Cursor fx:constant="HAND" />
+                                                  </cursor>
+                                               </CheckBox>
+                                            </children>
+                                         </VBox>
+                                      </children>
+                                   </VBox>
+                                </children>
+                             </AnchorPane>
+                          </content>
+                          <padding>
+                             <Insets bottom="20.0" left="28.0" right="28.0" top="20.0" />
+                          </padding>
+                       </ScrollPane>
+                    </content>
+                  </Tab>
+                  <Tab closable="false" text="Download">
+                     <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="bg-midnight">
+                           <content>
+                              <AnchorPane styleClass="bg-midnight">
+                                 <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label styleClass="text-midday" text="Download folder">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label styleClass="text-midday-more-1" text="Select the folder the video will be downloaded to">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Italic" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <Button fx:id="uiDownloadFolderButton" mnemonicParsing="false" text="Change folder">
+                                                         <HBox.margin>
+                                                            <Insets right="16.0" />
+                                                         </HBox.margin>
+                                                         <styleClass>
+                                                            <String fx:value="btn-midnight" />
+                                                            <String fx:value="text-midday" />
+                                                            <String fx:value="glow-on-hover" />
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                                         </padding>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Label fx:id="uiDownloadFolder" styleClass="text-midday">
+                                                         <font>
+                                                            <Font name="Noto Mono" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Separator opacity="0.5">
+                                                   <padding>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </padding>
+                                                </Separator>
+                                                <Label layoutX="10.0" layoutY="142.0" styleClass="text-midday" text="Download automatically">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <CheckBox fx:id="uiDownloadAutomatically" layoutX="10.0" layoutY="173.0" mnemonicParsing="false" text="Automatically download pasted video and proceed to &#10;download remaining video (until the specified limit)" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </CheckBox>
+                                                <VBox fx:id="uiAutomaticDownloadContainer" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <Separator opacity="0.5">
+                                                         <padding>
+                                                            <Insets bottom="16.0" top="16.0" />
+                                                         </padding>
+                                                      </Separator>
+                                                      <Label styleClass="text-midday" text="Download strategy">
+                                                         <font>
+                                                            <Font name="System Bold" size="15.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets bottom="12.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER_LEFT">
+                                                         <children>
+                                                            <ComboBox fx:id="uiAutomaticDownloadStrategy" prefWidth="150.0">
+                                                               <HBox.margin>
+                                                                  <Insets right="12.0" />
+                                                               </HBox.margin>
+                                                            </ComboBox>
+                                                            <Label styleClass="text-midday-more-1" text="Strategy to use for automatic download" wrapText="true" />
+                                                         </children>
+                                                      </HBox>
+                                                      <Separator opacity="0.5">
+                                                         <padding>
+                                                            <Insets bottom="16.0" top="16.0" />
+                                                         </padding>
+                                                      </Separator>
+                                                      <VBox fx:id="uiStaticStrategyContainer">
+                                                         <children>
+                                                            <Label styleClass="text-midday" text="Simultaneous video download limit">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="12.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <HBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Spinner fx:id="uiSimultaneousVideoLimit" editable="true" minWidth="80.0" prefWidth="80.0" styleClass="spinner-midnight">
+                                                                     <HBox.margin>
+                                                                        <Insets right="12.0" />
+                                                                     </HBox.margin>
+                                                                  </Spinner>
+                                                                  <Text styleClass="text-midday-more-1" text="Maximum number of simultaneous video that can be downloaded&#10;at the same time (when 'Download Automatically' is enabled)" />
+                                                               </children>
+                                                            </HBox>
+                                                            <Separator opacity="0.5">
+                                                               <padding>
+                                                                  <Insets bottom="16.0" top="16.0" />
+                                                               </padding>
+                                                            </Separator>
+                                                            <Label styleClass="text-midday" text="Simultaneous video of different providers">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="12.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <CheckBox fx:id="uiSimultaneousVideoForEachProvider" mnemonicParsing="false" text="For each video provider, allow the specified simultaneous video limit" wrapText="true">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <styleClass>
+                                                                  <String fx:value="text-midday-more-1" />
+                                                                  <String fx:value="check-box-midnight" />
+                                                               </styleClass>
+                                                               <cursor>
+                                                                  <Cursor fx:constant="HAND" />
+                                                               </cursor>
+                                                            </CheckBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="12.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                      <Separator opacity="0.5">
+                                                         <padding>
+                                                            <Insets bottom="16.0" top="16.0" />
+                                                         </padding>
+                                                      </Separator>
+                                                      <VBox fx:id="uiAdaptiveStrategyContainer">
+                                                         <VBox.margin>
+                                                            <Insets bottom="12.0" />
+                                                         </VBox.margin>
+                                                         <children>
+                                                            <Label styleClass="text-midday" text="Download bandwidth limit">
+                                                               <font>
+                                                                  <Font name="System Bold" size="15.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="12.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <HBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Spinner fx:id="uiBandwidthLimit" editable="true" minWidth="80.0" prefWidth="80.0" styleClass="spinner-midnight">
+                                                                     <HBox.margin>
+                                                                        <Insets right="4.0" />
+                                                                     </HBox.margin>
+                                                                  </Spinner>
+                                                                  <Label maxWidth="40.0" minWidth="40.0" prefWidth="40.0" styleClass="text-midday-more-1" text="MB/s" />
+                                                                  <Text styleClass="text-midday-more-1" text="Video will be downloaded until the sum of the average download &#10;speed of each download reaches the specified value" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <padding>
+                              <Insets bottom="20.0" left="28.0" right="28.0" top="20.0" />
+                           </padding>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Executables">
+                    <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="bg-midnight">
+                           <content>
+                             <AnchorPane styleClass="bg-midnight">
+                                <children>
+                                   <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <children>
+                                         <VBox VBox.vgrow="ALWAYS">
+                                            <children>
+                                               <Label layoutX="10.0" layoutY="230.0" styleClass="text-midday" text="Chrome driver path">
+                                                  <font>
+                                                     <Font name="System Bold" size="15.0" />
+                                                  </font>
+                                                  <VBox.margin>
+                                                     <Insets bottom="12.0" />
+                                                  </VBox.margin>
+                                               </Label>
+                                               <Label layoutX="10.0" layoutY="41.0" styleClass="text-midday-more-1" text="Select chrome driver path">
+                                                  <font>
+                                                     <Font name="System Italic" size="13.0" />
+                                                  </font>
+                                                  <VBox.margin>
+                                                     <Insets bottom="10.0" />
+                                                  </VBox.margin>
+                                               </Label>
+                                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="67.0">
+                                                  <children>
+                                                     <Button fx:id="uiChromeDriverButton" minWidth="110.0" mnemonicParsing="false" text="Change path">
+                                                        <HBox.margin>
+                                                           <Insets right="16.0" />
+                                                        </HBox.margin>
+                                                        <styleClass>
+                                                           <String fx:value="btn-midnight" />
+                                                           <String fx:value="text-midday" />
+                                                           <String fx:value="glow-on-hover" />
+                                                        </styleClass>
+                                                        <padding>
+                                                           <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                                        </padding>
+                                                        <cursor>
+                                                           <Cursor fx:constant="HAND" />
+                                                        </cursor>
+                                                     </Button>
+                                                     <Label fx:id="uiChromeDriver" styleClass="text-midday" HBox.hgrow="NEVER">
+                                                        <font>
+                                                           <Font name="Noto Mono" size="14.0" />
+                                                        </font>
+                                                     </Label>
+                                                  </children>
+                                               </HBox>
+                                               <Separator opacity="0.5">
+                                                  <padding>
+                                                     <Insets bottom="16.0" top="16.0" />
+                                                  </padding>
+                                               </Separator>
+                                                <Label layoutX="10.0" layoutY="10.0" styleClass="text-midday" text="ffmpeg path">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="41.0" styleClass="text-midday-more-1" text="Required for VVVVID downloads.&#10;Select ffmpeg path; &#10;If not specified, the executable is supposted to be available in the environment paths.&#10;">
+                                                   <font>
+                                                      <Font name="System Italic" size="13.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="67.0">
+                                                   <children>
+                                                      <Button fx:id="uiFFmpegButton" mnemonicParsing="false" text="Change path">
+                                                         <HBox.margin>
+                                                            <Insets right="16.0" />
+                                                         </HBox.margin>
+                                                         <styleClass>
+                                                            <String fx:value="btn-midnight" />
+                                                            <String fx:value="text-midday" />
+                                                            <String fx:value="glow-on-hover" />
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                                         </padding>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Label fx:id="uiFFmpeg" styleClass="text-midday">
+                                                         <font>
+                                                            <Font name="Noto Mono" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <Separator layoutX="10.0" layoutY="107.0" opacity="0.5">
+                                                   <padding>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </padding>
+                                                </Separator>
+                                                <Label layoutX="10.0" layoutY="142.0" styleClass="text-midday" text="youtube-dl path">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="173.0" styleClass="text-midday-more-1" text="Required for youtube downloads.&#10;Select youtube-dl path.&#10;If not specified, the executable is supposted to be available in the environment paths.&#10;">
+                                                   <font>
+                                                      <Font name="System Italic" size="13.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="217.0">
+                                                   <children>
+                                                      <Button fx:id="uiYoutubeDlButton" mnemonicParsing="false" text="Change path">
+                                                         <HBox.margin>
+                                                            <Insets right="16.0" />
+                                                         </HBox.margin>
+                                                         <styleClass>
+                                                            <String fx:value="btn-midnight" />
+                                                            <String fx:value="text-midday" />
+                                                            <String fx:value="glow-on-hover" />
+                                                         </styleClass>
+                                                         <padding>
+                                                            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                                         </padding>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Label fx:id="uiYoutubeDl" styleClass="text-midday">
+                                                         <font>
+                                                            <Font name="Noto Mono" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                            </children>
+                                         </VBox>
+                                      </children>
+                                   </VBox>
+                                </children>
+                             </AnchorPane>
+                           </content>
+                           <padding>
+                              <Insets bottom="20.0" left="28.0" right="28.0" top="20.0" />
+                           </padding>
+                        </ScrollPane>
+                    </content>
+                  </Tab>
+                  <Tab closable="false" text="Debug">
+                     <content>
+                        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" styleClass="bg-midnight">
+                           <content>
+                              <AnchorPane styleClass="bg-midnight">
+                                 <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label layoutX="10.0" layoutY="416.0" styleClass="text-midday" text="Selenium driver">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <CheckBox fx:id="uiChromeDriverGhostMode" layoutX="10.0" layoutY="261.0" mnemonicParsing="false" text="Hide and mute chrome driver ('--headless' and '--mute-audio' flag)" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </CheckBox>
+                                                <CheckBox fx:id="uiCloseDriverOnDownloadStarted" layoutX="10.0" layoutY="41.0" mnemonicParsing="false" text="Close driver on download started" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <CheckBox fx:id="uiCloseDriverOnInfoRetrieved" layoutX="10.0" layoutY="75.0" mnemonicParsing="false" text="Close driver on video info retrieved" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <Separator opacity="0.5">
+                                                   <VBox.margin>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </VBox.margin>
+                                                </Separator>
+                                                <Label layoutX="10.0" layoutY="10.0" styleClass="text-midday" text="Logging">
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets bottom="12.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <CheckBox fx:id="uiLogging" layoutX="10.0" layoutY="39.0" mnemonicParsing="false" text="Enable logging" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </CheckBox>
+                                                <CheckBox fx:id="uiFlush" layoutX="10.0" layoutY="127.0" mnemonicParsing="false" text="Flush after every message" wrapText="true">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <styleClass>
+                                                      <String fx:value="text-midday-more-1" />
+                                                      <String fx:value="check-box-midnight" />
+                                                   </styleClass>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <Button fx:id="uiConsoleButton" minWidth="110.0" mnemonicParsing="false" text="Open console">
+                                                   <HBox.margin>
+                                                      <Insets right="16.0" />
+                                                   </HBox.margin>
+                                                   <styleClass>
+                                                      <String fx:value="btn-midnight" />
+                                                      <String fx:value="text-midday" />
+                                                      <String fx:value="glow-on-hover" />
+                                                   </styleClass>
+                                                   <padding>
+                                                      <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                                                   </padding>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <VBox.margin>
+                                                      <Insets top="16.0" />
+                                                   </VBox.margin>
+                                                </Button>
+                                                <Separator layoutX="10.0" layoutY="77.0" opacity="0.5">
+                                                   <VBox.margin>
+                                                      <Insets bottom="16.0" top="16.0" />
+                                                   </VBox.margin>
+                                                </Separator>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <padding>
+                              <Insets bottom="20.0" left="28.0" right="28.0" top="20.0" />
+                           </padding>
+                        </ScrollPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="uiCancel" mnemonicParsing="false" text="Cancel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="text-midday" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="uiOk" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Ok" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="text-midday" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <padding>
+                        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="28.0" right="28.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

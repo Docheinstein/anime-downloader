@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="uiRoot" prefHeight="80.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <Region fx:id="uiPercentage" styleClass="percentage-bar-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="100.0" spacing="12.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <ImageView fx:id="uiProviderLogo" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/error.png" />
+            </image>
+         </ImageView>
+         <VBox alignment="CENTER_LEFT" spacing="6.0" HBox.hgrow="ALWAYS">
+            <children>
+               <Label fx:id="uiTitle" maxWidth="1.7976931348623157E308" styleClass="text-midday">
+                  <font>
+                     <Font name="System Bold" size="15.0" />
+                  </font>
+               </Label>
+               <Label fx:id="uiLink" styleClass="text-midday-more-1">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Label>
+               <HBox fx:id="uiDownloadInfo" prefHeight="100.0" prefWidth="200.0" visible="false">
+                  <children>
+                     <Label fx:id="uiCurrent" styleClass="text-midday-more-2" text="0">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Label styleClass="text-midday-more-2" text="/">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="uiSize" layoutX="10.0" layoutY="10.0" styleClass="text-midday-more-2">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <Label styleClass="text-midday-more-2" text=" MB">
+                        <font>
+                           <Font size="11.0" />
+                        </font>
+                     </Label>
+                     <HBox fx:id="uiSpeedContainer" alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                        <children>
+                           <Label fx:id="uiSpeed" alignment="CENTER_RIGHT" styleClass="text-midday-more-2" text="0" textAlignment="JUSTIFY">
+                              <font>
+                                 <Font size="11.0" />
+                              </font>
+                           </Label>
+                           <Label alignment="CENTER_RIGHT" styleClass="text-midday-more-2" text=" KB/s">
+                              <font>
+                                 <Font size="11.0" />
+                              </font>
+                           </Label>
+                        </children>
+                     </HBox>
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+         <ProgressIndicator fx:id="uiPreDownloadSpinner" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" prefHeight="40.0" prefWidth="40.0" visible="false" />
+         <Button fx:id="uiStartStopOpen" mnemonicParsing="false">
+            <graphic>
+               <ImageView fx:id="uiStartStopOpenImage" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/start.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            <styleClass>
+               <String fx:value="btn-midnight" />
+               <String fx:value="glow-on-hover" />
+            </styleClass>
+         </Button>
+         <Button fx:id="uiRemove" layoutX="89.0" layoutY="93.0" mnemonicParsing="false">
+            <graphic>
+               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/remove.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+            <styleClass>
+               <String fx:value="btn-midnight" />
+               <String fx:value="glow-on-hover" />
+            </styleClass>
+            <tooltip>
+               <Tooltip text="Remove from list" />
+            </tooltip>
+         </Button>
+
+      </children>
+      <padding>
+         <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+      </padding>
+   </HBox>
+   <styleClass>
+      <String fx:value="bg-midnight-less-1" />
+      <String fx:value="drop-shadow" />
+   </styleClass>
+
+</AnchorPane>

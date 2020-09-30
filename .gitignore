@@ -1,0 +1,17 @@
+# Ignore Gradle project-specific cache directory
+/.gradle
+
+# Ignore IntelliJ stuff
+/.idea
+*.iml
+
+# Ignore build directories
+/out
+/build
+
+# Anime downloader runtime stuff
+/settings
+/logs
+/drivers
+/tmp
+/videos

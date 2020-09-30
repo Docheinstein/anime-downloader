@@ -1,0 +1,7 @@
+1) Let the user reorder the rows of the video which download is not started yet
+2) Show the video progress if the file already exists when the app opens
+3) Implement a mechanism that anticipate the download of the videos
+   by retrieving the direct links of those (some time before the download)
+4) Improve youtube provider (detecting download progress and speed)
+5) Automatically handle chromium and chrome driver version
+6) Improve console

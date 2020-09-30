@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="uiRoot" prefHeight="600.0" prefWidth="800.0" styleClass="bg-midnight" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_RIGHT" spacing="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="16.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label contentDisplay="CENTER" maxWidth="1.7976931348623157E308" styleClass="text-midday" text="ANIME DOWNLOADER">
+                     <font>
+                        <Font name="Carlito Bold" size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="uiVersion" alignment="BASELINE_LEFT" maxWidth="1.7976931348623157E308" styleClass="text-midday-more-1" text="1.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="uiStartDownload" layoutX="580.0" layoutY="10.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/start.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Start download automatically" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets right="12.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="uiSettings" layoutX="704.0" layoutY="10.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Settings" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets right="12.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="uiOpenDownloadFolder" layoutX="642.0" layoutY="10.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Open download folder" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets right="12.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="uiPaste" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/paste.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="btn-midnight" />
+                        <String fx:value="glow-on-hover" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="Paste link" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <ListView fx:id="uiDownloadList" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding>
+               <placeholder>
+                  <Label styleClass="text-midday-more-1" text="Press CTRL + V for paste video links">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </placeholder>
+               <styleClass>
+                  <String fx:value="bg-midnight-less-2" />
+                  <String fx:value="list-view-midnight" />
+               </styleClass>
+            </ListView>
+            <Label alignment="CENTER_RIGHT" styleClass="text-midday-more-1" text="Supported: Openload, Streamango, Verystream, Mixdrop, VVVVID (ffmpeg), Youtube (youtube-dl)">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="24.0" left="28.0" right="28.0" top="24.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
