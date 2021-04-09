@@ -22,7 +22,7 @@ public class Config {
         public static final int LIVE_CONSOLE_WIDTH = 800;
         public static final int LIVE_CONSOLE_HEIGHT = 600;
 
-        public static final String VERSION = "0.9.11";
+        public static final String VERSION = "0.9.12";
     }
 
     /** Contains the application's files names. */

@@ -134,7 +134,7 @@ public class VVVVIDMarionette
             return null;
         }
 
-        String penultimateComponent = downloadUrlComponents[downloadUrlComponents.length - 3];
+        String penultimateComponent = downloadUrlComponents[downloadUrlComponents.length - 2];
 
         L.verbose("Video identifier is: " + penultimateComponent);
 
